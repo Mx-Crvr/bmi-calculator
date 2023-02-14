@@ -1,7 +1,7 @@
 @import 'config';
 
 button {
-    margin: auto;
+    margin: 2em auto;
     width: 50%;
     padding: 0.75em;
     background-color: $primary-color;
@@ -9,10 +9,20 @@ button {
     border: 1px solid $dark-color;
     cursor: pointer;
     transition: all 0.19s ease-in-out;
+    color: $dark-color;
+    letter-spacing: 0.8px;
+    font-weight: 600;
 }
 
 button:hover {
     background-color: $half-primary-color;
     border: 1px solid #00000000;
+}
+
+@media (max-width: 992px) {
+    button {
+        margin: 0 auto;
+        width: 66%;
+    }
 }
 

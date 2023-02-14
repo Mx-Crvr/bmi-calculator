@@ -50,11 +50,79 @@ body {
 }
 
 .result-container {
+    margin-top: 1em;
     display: none;
+
     p {
         font-size: 1.8em;
     }
 }
+
+#spinner {
+    display: none;
+}
+
+@keyframes spinner {
+    0% {
+      transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+  }
+  .spin::before {
+    animation: 1.5s linear infinite spinner;
+    animation-play-state: inherit;
+    border: solid 0.5em #c2c2c2;
+    border-bottom-color: $primary-color;
+    border-radius: 50%;
+    content: "";
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    will-change: transform;
+  }
+
+.bold-text {
+    font-weight: 600;
+}
+
+#again-btn {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    nav {
+        padding: 1.2em 4em;
+    }
+
+    .main-container {
+        margin: 8em auto;
+        padding: 0;
+    }
+    
+    .secondary-container {
+        width: 66%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        gap: 0.2em;
+    }
+
+    .result-container {
+        display: none;
+    }
+
+    .spin::before {
+        top: 70%;
+      }
+}
+
 
 
 
