@@ -6,7 +6,13 @@ button {
     padding: 0.75em;
     background-color: $primary-color;
     border-radius: 0.6em;
-    border: 1px solid $primary-color;
+    border: 1px solid $dark-color;
     cursor: pointer;
+    transition: all 0.19s ease-in-out;
+}
+
+button:hover {
+    background-color: $half-primary-color;
+    border: 1px solid #00000000;
 }
 
