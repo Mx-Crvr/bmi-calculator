@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+@import 'config';
+@import 'utilities';
+@import 'buttons';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background-color: $primary-color;
+    box-shadow: 2px 4px 15px #c053d393;
+    padding: 1.2em 12em;
+    text-align: center;
+
+    p {
+        font-size: 1.5em;
+        font-weight: 600;
+        color: $light-color;
+    }
+}
+
+body {
+    background-color: $light-color;
+    font-family: $body-font;
+    line-height: 1.6;
+}
+
+.main-container {
+    margin: 6em auto;
+    padding: 0 12em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.secondary-container {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0.2em;
+}
+
+
+
+
+
