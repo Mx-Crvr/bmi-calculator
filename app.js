@@ -19,9 +19,12 @@ const getBMI = () => {
     return ((+weightInput.value) / ((+heightInput.value * 0.01) ** 2)).toFixed(1);
 };
 
+
+
 const displayResult = () => {
     resultContainer.style.display = 'block';
-    resultText.innerHTML += `Your BMI is <span class="bold-text">${getBMI()}</span>`;
+    let answer = +(getBMI());
+    resultText.innerHTML += `Your BMI is <span class="bold-text">${answer}</span>`;
 };
 
 btn.addEventListener('click', () => {
@@ -43,4 +46,6 @@ againBtn.addEventListener('click', () => {
     heightInput.value = '';
     weightInput.focus();
 });
+
+
 
