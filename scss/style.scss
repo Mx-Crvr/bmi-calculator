@@ -99,6 +99,11 @@ body {
 }
 
 .information {
+    h2 {
+        text-decoration: underline;
+        margin-bottom: 0.75em;
+        font-size: 2em;
+    }
     background-color: $dark-color;
     padding: 2em;
     border-radius: 0.4em;
@@ -111,7 +116,6 @@ body {
     p {
         margin-bottom: 1em;
         font-size: 1.5em;
-        text-align: center;
     }
 }
 
@@ -121,7 +125,23 @@ body {
     font-size: 1.5em;
 }
 
+.green {
+    color: $green;
+    display: inline-block;
+    width: 50%;
+}
 
+.red {
+    color: $red;
+    display: inline-block;
+    width: 50%;
+}
+
+.orange {
+    color: $orange;
+    display: inline-block;
+    width: 50%;
+}
 
 @media (max-width: 992px) {
     nav {
