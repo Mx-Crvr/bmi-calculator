@@ -28,13 +28,21 @@ const displayResult = () => {
 };
 
 btn.addEventListener('click', () => {
-    btn.style.display = 'none';
-    showSpinner();
+    
+    if (heightInput.value == '' || weightInput.value == '') {
+        alert('Please enter your weight/height');
+    } else {
+        btn.style.display = 'none';
+        showSpinner();
         setTimeout(() => {
             hideSpinner();
             displayResult();
             againBtn.style.display = 'block';
         }, 1000)
+        weightInput.setAttribute('disabled', 'disabled')
+        heightInput.setAttribute('disabled', 'disabled')
+    }
+   
 });
 
 againBtn.addEventListener('click', () => {
@@ -42,6 +50,8 @@ againBtn.addEventListener('click', () => {
     againBtn.style.display = 'none';
     resultContainer.style.display = 'none';
     resultText.innerText = ``
+    weightInput.removeAttribute('disabled');
+    heightInput.removeAttribute('disabled');
     weightInput.value = '';
     heightInput.value = '';
     weightInput.focus();
