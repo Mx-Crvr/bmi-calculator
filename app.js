@@ -4,7 +4,7 @@ const btn = document.getElementById('calculate-btn');
 const againBtn = document.getElementById('again-btn')
 const weightInput = document.getElementById('weight-input');
 const heightInput = document.getElementById('height-input');
-
+const infoWrapper = document.getElementById('information');
 const resultContainer = document.getElementById('result-container');
 const resultText = document.getElementById('result-text');
 
@@ -38,6 +38,7 @@ btn.addEventListener('click', () => {
             hideSpinner();
             displayResult();
             againBtn.style.display = 'block';
+            infoWrapper.style.display = 'flex';
         }, 1000)
         weightInput.setAttribute('disabled', 'disabled')
         heightInput.setAttribute('disabled', 'disabled')
@@ -48,6 +49,7 @@ btn.addEventListener('click', () => {
 againBtn.addEventListener('click', () => {
     btn.style.display = 'block';
     againBtn.style.display = 'none';
+    infoWrapper.style.display = 'none';
     resultContainer.style.display = 'none';
     resultText.innerText = ``
     weightInput.removeAttribute('disabled');
